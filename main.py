@@ -3,6 +3,13 @@ from discord.ext import tasks, commands
 import random
 from collections import Counter
 import os  # To load the token from .env
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # This loads the environment variables from the .env file
+
+discord_token = os.getenv("DISCORD_TOKEN")
+
 
 # Initialize the activity counter
 activity_counter = Counter()
